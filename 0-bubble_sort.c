@@ -2,29 +2,27 @@
 
 /**
  * bubble_sort - sorts an array of integers in ascending order
- * using the Bbble sort algorithm
+ * using the Bubble sort algorith,
+ *
  * @array: an array of integers
  * @size: size of array @array
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t k, z, temp;
-
-
+	size_t i, j, temp;
 
 	if (array)
 	{
-		/* second loop for swapping */
-		for (k = 0; k < size - 1; k++)
+		for (i = 0; i < size - 1; i++)
 		{
-			for (z = 0; z < size - 1 - k; z++)
+			for (j = 0; j < size - 1 - i; j++)
 			{
-				if (array[z] > array[z + 1])
+				if (array[j] > array[j + 1])
 				{
-					temp = array[z]; /* stores value temporary for swap */
-					array[z] = array[z + 1];
-					array[z + 1] = temp;
-					print_array(array, size); /* prints array for every swap */
+					temp = array[j];
+					array[j] = array[j + 1];
+					array[j + 1] = temp;
+					print_array(array, size);
 				}
 			}
 		}
